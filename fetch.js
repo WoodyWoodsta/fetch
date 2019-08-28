@@ -483,8 +483,8 @@ export function fetch(input, init) {
       xhr.withCredentials = false
     }
 
-    if ('responseType' in xhr && support.blob) {
-      xhr.responseType = 'blob'
+    if ('responseType' in xhr && support.arrayBuffer) {
+      xhr.responseType = 'arraybuffer'
     }
 
     request.headers.forEach(function(value, name) {
